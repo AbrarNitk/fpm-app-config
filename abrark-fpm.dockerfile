@@ -27,5 +27,9 @@ CMD ["/app/fpm", "serve", "8080", "--bind", "0.0.0.0", "--download-base-url", "h
 # flyctl launch --dockerfile abrark-fpm.dockerfile
 # flyctl deploy
 
+# flyctl status
+# flyctl ips list
+
+
 ## fpm-heroku
 ## Button: On click deploy on fly
