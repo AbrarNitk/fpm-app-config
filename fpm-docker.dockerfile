@@ -10,7 +10,19 @@ RUN /bin/bash /app/fpm-install.sh
 
 EXPOSE 8000
 
-CMD ["/app/fpm", "serve", "8000", "--bind", "0.0.0.0", "--download-base-url", "https://raw.githubusercontent.com/AbrarNitk/abrark/main/"]
+CMD ["sh", "-c", "/app/fpm serve ${PORT} --bind 0.0.0.0 --download-base-url ${DOWNLOAD_BASE_URL}"]
+
+# docker build -t fpm-docker . --file fpm-docker.dockerfile
+# docker run --env PORT=8000 --env DOWNLOAD_BASE_URL=https://raw.githubusercontent.com/AbrarNitk/abrark/main/ -p 8000:8000 -it fpm-docker:latest
+# docker stop $(docker container ps -a -q)
+# docker rm $(docker container ps -a -q)
+# docker rmi $(docker images -a -q)
+
+# docker images
+# docker container ps -a
+# docker exec -it fc7da85e59c2 /bin/bash
+# docker start fc7da85e59c2
+
 
 #RUN mv fpm /bin
 
