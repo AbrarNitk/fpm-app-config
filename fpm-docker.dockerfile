@@ -64,3 +64,8 @@ CMD ["sh", "-c", "/app/fpm serve ${PORT} --bind 0.0.0.0 --download-base-url ${DO
 # `flyctl open` is not working
 # `flyctl ssh console` is working, and also curl http://0.0.0.0:8080 is also working
 # https://community.fly.io/t/app-starting-but-not-available-somehow/5988
+
+# flyctl list orgs
+# flyctl list apps
+# flyctl ssh console --app kameri-app-3
+# flyctl restart kameri-app-3
